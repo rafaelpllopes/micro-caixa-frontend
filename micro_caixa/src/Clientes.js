@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
 
 const API = 'http://localhost:5000/clientes'
 
 export default function Clientes() {
-    return (<>
-        <h1 className="text-uppercase text-center">Clientes</h1>
-        <section className='row'>
-            <div className="col-md-6">
-                <ClientesLista />
-            </div>
-            <div className="col-md-6">
-                <ClientesCadastrar />
-            </div>
-        </section>
-    </>
+    return (
+        <>
+            <h1 className="text-uppercase text-center">Clientes</h1>
+            <section className='row'>
+                <div className="col-md-6">
+                    <ClientesLista />
+                </div>
+                <div className="col-md-6">
+                    <ClientesCadastrar />
+                </div>
+            </section>
+        </>
     )
 }
 
@@ -27,9 +29,10 @@ export function ClientesCadastrar() {
                 e.preventDefault()
                 const dadosForm = new FormData(e.target)
                 setCliente(JSON.stringify({ nome: dadosForm.get('nome') }))
-                console.log(cliente)
+                // let resposta = await axios.post(API, cliente)
                 let resposta = await fetch(API, { method: 'POST', body: cliente })
-            }}> 
+                console.log(resposta)
+            }}>
                 <div className="mb-3">
                     <label for="nome" className="form-label">Nome</label>
                     <input type="text" id="nome" name="nome" className="form-control" aria-describedby="nomeHelp" value={cliente.nome} />

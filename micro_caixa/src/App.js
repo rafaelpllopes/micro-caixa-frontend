@@ -37,7 +37,7 @@ export default class Clientes extends Component {
           </div>
         </nav>
       </header>
-      <main className="container">
+      <main className="container-fluid">
         {this.props.children}
       </main>
       <footer className="footer navbar-fixed-bottom">
