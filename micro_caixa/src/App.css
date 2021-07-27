@@ -1,4 +1,10 @@
-header {
+footer {
+  position: fixed;
+  bottom:0;
+  text-align: center;
+}
+
+/* header {
   margin-bottom: 1rem;
 }
 
@@ -6,11 +12,6 @@ table {
   margin-bottom: 3rem;
 }
 
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
 
 .nav-link:hover {
   border-bottom: 1px solid white;
@@ -35,30 +36,13 @@ footer {
   font-weight: bold;
 }
 
-
 .flex-header p:nth-child(2) {
   text-align: center;
   flex-direction: row;
   font-size: 1rem;
 }
 
-.img {
-  width: 7rem;
-  height: 4.5rem;
-}
-
 button {
   margin-top: 0.5rem;
 }
-
-#messages {
-  margin-top: 0.5rem;
-  text-align: center;
-}
-
-@media only screen and (max-width: 590px) {
-  .descricao {
-      display: none;
-  }
-}
-
+ */
